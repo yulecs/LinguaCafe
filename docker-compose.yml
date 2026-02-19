@@ -42,7 +42,7 @@ services:
             timeout: 5s
             retries: 10
         volumes:
-            - ./database:/var/lib/mysql
+            - ./docker/mysql:/var/lib/mysql
         environment:
             MYSQL_DATABASE: ${DB_DATABASE:-linguacafe}
             MYSQL_USER: ${DB_USERNAME:-linguacafe}
